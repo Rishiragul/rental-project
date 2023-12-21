@@ -13,4 +13,3 @@ module('Integration | Component | top', function (hooks) {
     assert.dom('.top .image').exists();
   });
 });
-   
