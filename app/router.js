@@ -9,4 +9,5 @@ Router.map(function () {});
 Router.map(function () {
   this.route('about');
   this.route('contact');
+  this.route('rental', { path: '/rentals/:rental_id' });
 });

@@ -1,0 +1,40 @@
+<Top>
+    <h2>{{@rental.title}}</h2>
+    <p>Nice work! this gives addtional information of {{@rental.city}}</p>
+    {{!-- <a href="#" target="_blank" rel="external nofollow noopener noreferrer" class="share button">
+    Share on Twitter
+  </a> --}}
+  <ShareButton 
+   @text="check out {{@rental.title}} on super Rentals"
+   @hashtags="vaction,mansion"
+   @via="emberjs"
+   >
+    share on Twitter
+  </ShareButton>
+
+</Top>
+
+<article class="rental detailed">
+    <Rental::Image
+    src={{@rental.image}}
+    alt=" a picture of {{@rental.title}}"/>
+    <div calss="details">
+        <h3>About {{@rental.title}}</h3>
+        <div class="detail owner">
+            <span>Owner:</span>{{@rental.title}};
+        </div>
+        <div class="detail type">
+            <span>Type:</span>{{@rental.type}};
+        </div>
+        <div class="detail location">
+            <span>Location:</span>{{@rental.city}}
+        </div>
+        <div class="detail bedrooms">
+            <span>Bedrooms:</span>{{@rental.bedrooms}}
+        </div>
+        <div class="detail description">
+            <p>{{@rental.description}}</p>
+        </div>
+    </div>
+    <div> <Map @cityName={{@rental.city}} /></div>
+</article>

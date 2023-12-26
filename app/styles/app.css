@@ -14,9 +14,7 @@
 
 .image img {
   max-width: 100%;
-  height: auto;
   margin-left: 600px;
-  height: 200px;
 }
 
 h2 {
@@ -36,10 +34,9 @@ p {
   background-color: blue;
   border-radius: 5px;
 }
+
 .menu {
   height: 5em;
-  background-color: #677ae4;
-  background-color: #05526a;
   background-color: #e46855;
 }
 
@@ -77,4 +74,113 @@ p {
 .menu .links a {
   position: relative;
   bottom: 5px;
+}
+
+.menu .results {
+  display: none;
+  position: absolute;
+  width: 215px;
+  top: 54px;
+  left: 10px;
+  background-color: #f6f6f6;
+  border-right: 1px solid rgb(0 0 0 / 5%);
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
+}
+
+.results {
+  margin-top: -10px;
+}
+
+.results li {
+  list-style: none;
+  padding: 10px 15px;
+}
+
+.rental {
+  margin-top: 15px;
+  background-color: #f6f6f6;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+
+}
+
+
+.rental .details {
+  flex-basis: 50%;
+  flex-grow: 2;
+  display: flex;
+  height: 150px;
+  margin: 20px 25px;
+  place-content: space-around space-between;
+  flex-wrap: wrap;
+  
+}
+
+.rental h3 {
+  flex-basis: 100%;
+}
+
+.rental h3 a {
+  display: inline;
+}
+
+.rental .detail {
+  flex-basis: 50%;
+  font-weight: 300;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.rental .detail span {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rental:hover {
+  background-color: #f3f3f3;
+}
+
+.rental img {
+  border-radius: 5px;
+}
+
+.rental .image img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.rental .image.large {
+  margin: 30px 25px 50px;
+  flex-basis: 100%;
+ 
+  
+}
+
+.rental .image small {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: -15px;
+  text-align: center;
+  color: #016aba;
+
+  /* This is needed to fix a safari clipping issue */
+  position: relative;
+}
+
+.rental .image.large small {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 110%;
+}
+.imageLarge{
+  width: 800px;
+  
+}
+.map {
+  width: 60%; /* Adjust the width as needed */
+  
 }
