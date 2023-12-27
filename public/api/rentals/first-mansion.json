@@ -1,0 +1,20 @@
+{
+   "data": 
+        {
+          "type": "rentals",
+          "id": "First-Mansion",
+          "attributes": {
+            "title": "First Mansion",
+            "owner": "Rishi",
+            "city": "chennai",
+            "location": {
+              "lat": 37.7749,
+              "lng": -122.4194
+            },
+            "category": "Estate",
+            "bedrooms": 3,
+            "image": "/assets/images/mansion.png",
+            "description": "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests."
+          }
+        }
+}

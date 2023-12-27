@@ -1,6 +1,7 @@
 .top {
   display: flex;
   align-items: center;
+  background-color:rgb(194, 142, 247);
 }
 
 .text {
@@ -82,7 +83,7 @@ p {
   width: 215px;
   top: 54px;
   left: 10px;
-  background-color: #f6f6f6;
+  background-color: rgb(217, 217, 216);
   border-right: 1px solid rgb(0 0 0 / 5%);
   border-bottom: 1px solid rgb(0 0 0 / 5%);
 }
@@ -98,16 +99,14 @@ p {
 
 .rental {
   margin-top: 15px;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   padding: 20px 25px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  
-
+  transition: background-color 0.3s ease;
 }
-
 
 .rental .details {
   flex-basis: 50%;
@@ -117,7 +116,6 @@ p {
   margin: 20px 25px;
   place-content: space-around space-between;
   flex-wrap: wrap;
-  
 }
 
 .rental h3 {
@@ -141,7 +139,7 @@ p {
 }
 
 .rental:hover {
-  background-color: #f3f3f3;
+  background-color: #f59898;
 }
 
 .rental img {
@@ -156,8 +154,6 @@ p {
 .rental .image.large {
   margin: 30px 25px 50px;
   flex-basis: 100%;
- 
-  
 }
 
 .rental .image small {
@@ -176,11 +172,28 @@ p {
   margin-bottom: 0;
   font-size: 110%;
 }
-.imageLarge{
+
+.imageLarge {
   width: 800px;
-  
 }
+
 .map {
   width: 60%; /* Adjust the width as needed */
-  
+}
+
+.detailedMap {
+  padding-left: 500px;
+}
+
+.searchField {
+  margin-left: 600px;
+  font-size: larger;
+}
+
+.search {
+  margin-left: 600px;
+  border: 1px solid black;
+  height: 20px;
+  width: 220px;
+  border-radius: 5px;
 }

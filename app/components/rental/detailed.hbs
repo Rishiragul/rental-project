@@ -21,10 +21,10 @@
     <div calss="details">
         <h3>About {{@rental.title}}</h3>
         <div class="detail owner">
-            <span>Owner:</span>{{@rental.title}};
+            <span>Owner:</span>{{@rental.owner}};
         </div>
         <div class="detail type">
-            <span>Type:</span>{{@rental.type}};
+            <span>Type:</span>{{@rental.type}}-{{@rental.category}};
         </div>
         <div class="detail location">
             <span>Location:</span>{{@rental.city}}
@@ -36,5 +36,6 @@
             <p>{{@rental.description}}</p>
         </div>
     </div>
-    <div> <Map @cityName={{@rental.city}} /></div>
+    
 </article>
+<div class="detailedMap"> <Map @cityName={{@rental.city}} /></div>

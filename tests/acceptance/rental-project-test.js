@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, currentURL, click, render } from '@ember/test-helpers';
+import { visit, currentURL, click, render, find } from '@ember/test-helpers';
 import { setupApplicationTest } from 'rental-project/tests/helpers';
 
 module('Acceptance | rental project', function (hooks) {
@@ -18,6 +18,25 @@ module('Acceptance | rental project', function (hooks) {
     await click('.top a.button');
 
     assert.equal(currentURL(), '/about');
+  });
+  test('viewing the details of a rental property', async function (assert) {
+    await visit('/');
+    assert.dom('.rental').exists({ count: 3 });
+    await click('.rental:first-of-type a');
+    assert.strictEqual(currentURL(), '/rentals/First-Mansion');
+  });
+  test('after clicking the list items ito show the description of the item', async function (assert) {
+    await visit('/rentals/First-Mansion');
+    assert.strictEqual(currentURL(), '/rentals/First-Mansion');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('RENTAL');
+    assert.dom('h2').hasText('First Mansion');
+    assert.dom('.rental.detailed').exists();
+    assert.dom('.share.button').hasText('share on Twitter');
+    let button = find('.share.button');
+    let tweetURL = new URL(button.href);
+    assert.strictEqual(tweetURL.host, 'twitter.com');
+    // assert.strictEqual(tweetURL.searchParams.get('url'),`${window.location.origin}/rentals/First-Mansion`);
   });
   test('visiting /about', async function (assert) {
     await visit('/about');
